@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+    padding-right: 10%;
+    padding-left: 10%;
+    background-color: rgb(251, 255, 249);
+    font-family: sans-serif;
+}
+h1 {
+    font-size: 3em;
+}
+p, 
+a {
+    font-size: 18px;
+}
+p {
+    text-align: justify;
+}
