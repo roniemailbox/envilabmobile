@@ -1,3 +1,11 @@
+<?php  
+ $sumber = 'http://app.envilab.co.id/envilabapi/';
+ $konten = file_get_contents($sumber);
+ $data = json_decode($konten, true);
+ 
+
+?>
+
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -22,7 +30,7 @@
     <div id="page">
 
         <div class="header header-auto-show header-fixed header-logo-center">
-            <a href="index.html" class="header-title">Envilab's Mobile</a>
+            <a href="index.php" class="header-title">Envilab's Mobile</a>
             <a href="#" data-menu="menu-main" class="header-icon header-icon-1"><i class="fas fa-bars"></i></a>
             <a href="#" data-toggle-theme class="header-icon header-icon-4 show-on-theme-dark"><i class="fas fa-sun"></i></a>
             <a href="#" data-toggle-theme class="header-icon header-icon-4 show-on-theme-light"><i class="fas fa-moon"></i></a>
@@ -33,7 +41,7 @@
         <div id="footer-bar" class="footer-bar-6">
             <a href="index-components.html"><i class="fa fa-layer-group"></i><span>Complains</span></a>
             <a href="index-pages.html"><i class="fa fa-file"></i><span>LHU</span></a>
-            <a href="index.html" class="circle-nav active-nav"><i class="fa fa-home"></i><span>Home</span></a>
+            <a href="index.php" class="circle-nav active-nav"><i class="fa fa-home"></i><span>Home</span></a>
             <a href="index-projects.html"><i class="fa fa-image"></i><span>Quot</span></a>
             <a href="#" data-menu="menu-main"><i class="fa fa-bars"></i><span>Menu</span></a>
         </div>
@@ -65,6 +73,7 @@
                                 <div class="card-overlay bg-gradient"></div>
                             </div>
                         </div>
+                        
                         <div class="splide__slide ps-3">
                             <div data-card-height="220" class="card  shadow-xl rounded-m bg-16">
                                 <div class="card-bottom text-center">
@@ -73,6 +82,7 @@
                                 <div class="card-overlay bg-gradient"></div>
                             </div>
                         </div>
+
                         <div class="splide__slide ps-3">
                             <div data-card-height="220" class="card  shadow-xl rounded-m bg-19">
                                 <div class="card-bottom text-center">
@@ -81,6 +91,7 @@
                                 <div class="card-overlay bg-gradient"></div>
                             </div>
                         </div>
+
                         <div class="splide__slide ps-3">
                             <div data-card-height="220" class="card  shadow-xl rounded-m bg-31">
                                 <div class="card-bottom text-center">
@@ -89,6 +100,7 @@
                                 <div class="card-overlay bg-gradient"></div>
                             </div>
                         </div>
+
                         <div class="splide__slide ps-3">
                             <div data-card-height="220" class="card  shadow-xl rounded-m bg-33">
                                 <div class="card-bottom text-center">
@@ -97,6 +109,7 @@
                                 <div class="card-overlay bg-gradient"></div>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -129,7 +142,15 @@
                             <p class="color-highlight font-600 mb-n1">Copy and Paste Ready</p>
                             <h2>Components</h2>
                             <p class="mt-2">
-                                Reusable components that are just as easy as copy and paste.
+                                <?php
+                                    foreach ($data as $value) {
+   
+                                        echo "NIM : ".$value['id_customer']."<br>";
+                                        echo "Nama : ".$value['nama']."<br>";
+                                        echo "Alamat : ".$value['alamat']."<br><br>";
+                                       
+                                    }
+                                ?>
                             </p>
                             <a href="index-components.html" class="btn btn-sm rounded-s font-13 font-600 gradient-highlight">View All</a>
                         </div>
@@ -141,14 +162,14 @@
                         <div class="me-3">
                             <img width="120" class="fluid-img rounded-m shadow-xl" src="images/pictures/16l.jpg">
                         </div>
-                        <div>
-                            <p class="color-highlight font-600 mb-n1">Beautifully Crafted</p>
-                            <h2>Pages</h2>
-                            <p class="mt-2">
-                                Pages that feel amazing to your fingertips! Ready to use!
-                            </p>
-                            <a href="index-pages.html" class="btn btn-sm rounded-s font-13 font-600 gradient-highlight">View All</a>
-                        </div>
+                        <div class="input-style has-borders has-icon validate-field mb-4">
+                        <i class="fa fa-user"></i>
+                        <input type="name" class="form-control validate-name" id="form1" placeholder="Name">
+                        <label for="form1" class="color-highlight">Name</label>
+                        <i class="fa fa-times disabled invalid color-red-dark"></i>
+                        <i class="fa fa-check disabled valid color-green-dark"></i>
+                        <em>(required)</em>
+                    </div>
                     </div>
                     <div class="divider mt-4"></div>
     
