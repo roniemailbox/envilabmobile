@@ -1,10 +1,10 @@
 {
 "version": "2.0",
 "lang" : "en",
-"name" : "Envilab Customer Care",
+"name" : "Envilab Customer",
 "scope" : "/",
 "display" : "fullscreen",
-"start_url" : "index.html",
+"start_url" : "index.php",
 "short_name" : "m-ENV",
 "description": "Aplikasi Customer Services",
 "orientation" : "portrait",
