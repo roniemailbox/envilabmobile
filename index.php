@@ -28,7 +28,7 @@
   
 
     <div class="header header-fixed header-logo-left">
-    <a href="index.php" class="header-title">PT. Karunia </a>
+     
     </div>
 
     <div id="footer-bar" class="footer-bar-1-center">
@@ -42,11 +42,11 @@
 
     <div class="card card-style shadow-xl">
     
-    <h4 class="font-24 text-center color-theme font-800 pt-3 mt-3">Customer Login</h4>
-   
-
+    
+    <img class="img-fluid center-block" src="assets/img/icon.png" data-src="assets/img/icon.png" alt="image" style="margin: 0 auto; width:138px;">
+    <!-- <h5 class="font-24 text-center color-theme font-800 pt-3 mt-3">Hallo Envilab</h5> -->
         <div class="content">
-        <img class="img-fluid center-block" src="assets/img/icon.png" data-src="assets/img/icon.png" alt="image">
+            
             <p class="mb-1">
             <div class="input-style has-borders has-icon validate-field mb-4">
                 <i class="fa fa-user"></i>
