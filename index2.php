@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -21,7 +25,7 @@
 <div id="page">
     
     <div class="header header-fixed header-logo-left">
-        <a href="index.php" class="header-title">AppKit</a>
+        <a href="index.php" class="header-title"><?php echo $_SESSION['username'];   ?></a>
         <a href="#" data-menu="menu-main" class="header-icon header-icon-1"><i class="fas fa-bars"></i></a>
         <a href="#" data-toggle-theme class="header-icon header-icon-3 show-on-theme-dark"><i class="fas fa-sun"></i></a>
         <a href="#" data-toggle-theme class="header-icon header-icon-3 show-on-theme-light"><i class="fas fa-moon"></i></a>

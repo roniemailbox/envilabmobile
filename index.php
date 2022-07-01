@@ -79,13 +79,13 @@
     </div>
 
                                <?php
-                                    foreach ($data as $value) {
+                                    // foreach ($data as $value) {
    
-                                        echo "NIM : ".$value['id_customer']."<br>";
-                                        echo "Nama : ".$value['nama']."<br>";
-                                        echo "Password : ".$value['password']."<br><br>";
+                                    //     echo "NIM : ".$value['id_customer']."<br>";
+                                    //     echo "Nama : ".$value['nama']."<br>";
+                                    //     echo "Password : ".$value['password']."<br><br>";
                                        
-                                    }
+                                    // }
                                 ?>
     
     
