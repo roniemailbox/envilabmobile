@@ -1,5 +1,5 @@
 <?php  
- $sumber = 'http://app.envilab.co.id/envilabapi/';
+ $sumber = 'http://app.envilab.co.id/envilabapi/index.php/Get_person';
  $konten = file_get_contents($sumber);
  $data = json_decode($konten, true);
  
@@ -43,14 +43,15 @@
     <div class="card card-style shadow-xl">
     
     
-    <img class="img-fluid center-block" src="assets/img/icon.png" data-src="assets/img/icon.png" alt="image" style="margin: 0 auto; width:138px;">
+    <img class="img-fluid center-block" src="assets/img/icona.png" data-src="assets/img/icona.png" alt="image" style="margin: 0 auto; width:138px;">
     <!-- <h5 class="font-24 text-center color-theme font-800 pt-3 mt-3">Hallo Envilab</h5> -->
-        <div class="content">
+    <form action="actionlogin.php" method="post">    
+    <div class="content">
             
             <p class="mb-1">
             <div class="input-style has-borders has-icon validate-field mb-4">
                 <i class="fa fa-user"></i>
-                <input type="name" class="form-control validate-name" id="form1" placeholder="Username">
+                <input type="text" class="form-control validate-name" id="form1" name="username" placeholder="Username">
                 <label for="form1" class="color-highlight">Username</label>
                 <i class="fa fa-times disabled invalid color-red-dark"></i>
                 <i class="fa fa-check disabled valid color-green-dark"></i>
@@ -58,16 +59,18 @@
             </div>
             <div class="input-style has-borders has-icon validate-field mb-4">
                 <i class="fa fa-key"></i>
-                <input type="password" class="form-control validate-name" id="form1" placeholder="Password">
+                <input type="password" class="form-control validate-name" id="form1" name="password" placeholder="Password">
                 <label for="form1" class="color-highlight">Password</label>
                 <i class="fa fa-times disabled invalid color-red-dark"></i>
                 <i class="fa fa-check disabled valid color-green-dark"></i>
                 <em>(required)</em>
             </div>
-            <a href="#" class="btn btn-m rounded-sm shadow-xl bg-highlight color-white font-900 text-uppercase">Log In</a>
+        
+            <input class="btn btn-m rounded-sm shadow-xl bg-highlight color-white font-900 text-uppercase" type="submit" value="Login">
             </p>
       
     </div>
+    </form>
     <div class="divider mb-3"></div>
     <div class="row text-center mb-3 pl-3 pr-3">
         <a class="font-11 col-4" href="#">Privacy Policy</a>
@@ -75,7 +78,15 @@
         <a class="font-11 col-4" href="#">Contact Support</a>
     </div>
 
-     
+                               <?php
+                                    foreach ($data as $value) {
+   
+                                        echo "NIM : ".$value['id_customer']."<br>";
+                                        echo "Nama : ".$value['nama']."<br>";
+                                        echo "Password : ".$value['password']."<br><br>";
+                                       
+                                    }
+                                ?>
     
     
 </div>
